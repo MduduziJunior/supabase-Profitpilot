@@ -381,7 +381,7 @@ with check ((select auth.uid()) = user_id);`;
       return String(username || '').trim().toLowerCase().replace(/[^a-z0-9._-]/g,'_').replace(/^_+|_+$/g,'') || 'profitpilot_user';
     }
     function usernameToCloudEmail(username){
-      return normalizeUsernameForCloud(username) + '@profitpilot.local';
+      return normalizeUsernameForCloud(username) + '@profitpilot.app';
     }
     function cloudCredentialsFromAuthFields(){
       const loginUser = $('loginUsername') ? $('loginUsername').value.trim() : '';
